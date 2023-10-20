@@ -1,9 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://cpl5qsrkk2lp4"]
+[gd_scene load_steps=11 format=3 uid="uid://cpl5qsrkk2lp4"]
 
 [ext_resource type="PackedScene" uid="uid://nepbe3hc43n2" path="res://assets/models/modern/environment/dev_room_modern.glb" id="1_0kmvr"]
-[ext_resource type="Texture2D" uid="uid://bck0qn7we3gai" path="res://assets/images/lukky_logo.png" id="2_trmlg"]
 [ext_resource type="PackedScene" uid="uid://csf10okooq1ok" path="res://scenes/basic_fps_controller.tscn" id="2_x63y4"]
-[ext_resource type="Texture2D" uid="uid://c7pnart5w3uy7" path="res://icon.svg" id="3_sg4c2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pneq4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -89,16 +87,6 @@ mesh = SubResource("BoxMesh_c1jsd")
 transform = Transform3D(-6.95631e-07, 0, -1, 0, 5.39412, 0, 15.9142, 0, -4.37114e-08, 12.8016, 2.35218, -1.05561)
 mesh = SubResource("BoxMesh_c1jsd")
 
-[node name="posters" type="Node3D" parent="stage"]
-
-[node name="Decal" type="Decal" parent="stage/posters"]
-transform = Transform3D(-3.07198e-08, -0.679628, 3.73964e-08, 0.175901, -4.4073e-08, -0.656471, 0.656471, -1.99941e-08, 0.175901, 12.192, 2.24933, -0.0943906)
-texture_albedo = ExtResource("2_trmlg")
-
-[node name="Decal2" type="Decal" parent="stage/posters"]
-transform = Transform3D(-2.80479e-08, -0.565852, 1.23671e-08, -0.282926, 3.31376e-09, -0.490042, 0.490042, -3.04738e-08, -0.282926, 12.192, 2.80041, 0.905609)
-texture_albedo = ExtResource("3_sg4c2")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="stage"]
 
 [node name="floor" type="CollisionShape3D" parent="stage/StaticBody3D"]
@@ -162,3 +150,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0419942, 3.89675, 4.58093)
 shape = SubResource("BoxShape3D_hcrpe")
 
 [node name="basic_fps_controller" parent="." instance=ExtResource("2_x63y4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 0, 0)
